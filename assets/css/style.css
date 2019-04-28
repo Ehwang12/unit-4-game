@@ -7,6 +7,15 @@ header {
     text-align: center;
 }
 
+h4, h5, h6 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    font-family: 'VT323', monospace;
+}
+
 footer {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
