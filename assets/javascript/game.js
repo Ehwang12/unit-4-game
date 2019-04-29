@@ -1,28 +1,21 @@
 $(function() {
 
 //player starting score
-let playerScore = 0;
-let guessNumber = 0;
+var playerScore = 0;
+var guessNumber;
 var wins = 0;
 var loss = 0;
 
-
-
-
-
 //to start game
 function startGame() {
-   
+    
+    $(".crystal-image").empty();
     //reset random number generator
-    let guessNumber = Math.floor(Math.random() * 101) + 19;
-    console.log("random number is ", guessNumber);
+    var guessNumber = Math.floor(Math.random() * 101) + 19;
+    console.log("comp number is ", guessNumber);
     
     //puts random number into div
     $("#compNumber").text(guessNumber);
-    
-   
-    }
-    //console.log("generating: ", numberOptions);
     
     let imageArray = [
         "./assets/css/images/crystal_1.jpg",
@@ -48,21 +41,50 @@ function startGame() {
         //append crystals to div with id of "crystals"
         $("#crystals").append(imageCrystal);
     
-        
-    };
-  
-
- 
-//event listener for crystal
-$(".crystal-image").on("click", function() {
-    
-    console.log($(this).attr("data-crystal-value"));
-  
-
-  });
-
+    }
+}
 startGame();
+//event listener for crystal
+$(document).on("click", ".crystal-image", function() {
+    
+    var crystalValue = ($(this).attr("data-crystal-value"));
+    console.log($(this).attr("data-crystal-value"));
+   
+    //converting string value into number 
+    crystalValue = parseInt(crystalValue);
 
+    //adds crystal value to player score
+    playerScore += crystalValue; 
+
+    //display new total score 
+    $("#yourScore").text(playerScore);
+
+    if (playerScore >= guessNumber) {
+        
+        //show winning banner
+         $("#winLoseAnnounce").html("<h2>You Won!</h2>");
+
+         wins++;
+        
+         //update score
+         $("#winBox").text(wins);
+
+         startGame();
+
+    } else if (playerScore === guessNumber) {
+
+        //show losing banner
+        $("#winLoseAnnounce").html("<h2>You Lost!</h2>");
+
+        loss++;
+
+        //update score
+        $("#lossBox").html(loss);
+
+        startGame();
+
+    }
+  })
 });
 
 
