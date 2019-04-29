@@ -14,7 +14,7 @@
     <title>Crystal Collector</title>
 </head>
 <body>
-    <header class="header"><h1>Crystal Collector</h1></header>
+    <header class="header mb-3"><h1>Crystal Collector</h1></header>
     
     <div class="container">
     
@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-          <div class="card mx-auto" style="width: 18rem;">
+          <div class="card mx-auto mx-3" style="width: 18rem;">
             <div class="card-body text-center">
               <h5 class="card-title">Game Rules</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,12 +36,14 @@
         <!-- Progress Tracker -->
       
         <div class="row">
-        <div class="col-4 text-center">
-            <h4 id="winBox">Win: </h4>
+        <div class="col-4 text-center my-3">
+            <h4>Win: </h4>
+            <lr><span><h1 id="winBox">1</h1></span></lr> 
         </div>
-        <div class="col-4 text-center" id="winLoseAnnounce">You Lose/Win!</div>
-        <div class="col-4 text-center">
-            <h4 id="lossBox">Loss: </h4>
+        <div class="col-4 text-center my-3" id="winLoseAnnounce"><h2>You Lose/Win!</h2></div>
+        <div class="col-4 text-center my-3">
+            <h4>Loss: </h4>
+            <lr><span><h1 id="lossBox">1</h1></span></lr> 
         </div>
       </div>
     
@@ -62,16 +64,16 @@
       <div class="row">
         <div class="col-2"></div>
         <div class="col-2">
-            <img class="img-fluid crystalBtn" alt="Crystal 1" src="">    
+            <img class="img-fluid my-3 crystalBtn" value="" alt="Crystal 1" src="./assets/css/images/crystal_1.jpg">    
         </div>
         <div class="col-2">
-            <img class="img-fluid crystalBtn" alt="Crystal 2" src="">
+            <img class="img-fluid my-3 crystalBtn" value="" alt="Crystal 2" src="./assets/css/images/crystal_2.jpg">
         </div>
         <div class="col-2">
-            <img class="img-fluid crystalBtn" alt="Crystal 3" src="">
+            <img class="img-fluid my-3 crystalBtn" value="" alt="Crystal 3" src="./assets/css/images/crystal_3.jpg">
         </div>
         <div class="col-2">
-            <img class="img-fluid crystalBtn" alt="Crystal 4" src="">
+            <img class="img-fluid my-3 crystalBtn" value="" alt="Crystal 4" src="./assets/css/images/crystal_4.jpg">
         </div>
         <div class="col-2"></div>
       </div>
@@ -80,7 +82,7 @@
       
       <div class="row">
         <div class="col-12">
-          <div class="card border-dark mb-3 mx-auto" style="max-width: 12rem;">
+          <div class="card border-dark my-3 mx-auto" style="max-width: 12rem;">
               <div class="card-header text-center"><h6>Your Total Score:</h6></div>
               <div class="card-body text-dark">
                 <h5 class="card-title text-center" id="yourScore">Score</h5>
@@ -91,7 +93,7 @@
     
 </div>
 
-  <footer class="footer">
+  <footer class="fixed-bottom">
     Copyright &copy; Esther Hwang | 2019
   </footer>
 
