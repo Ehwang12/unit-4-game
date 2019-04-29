@@ -20,28 +20,43 @@ function startGame() {
     //puts random number into div
     $("#compNumber").text(guessNumber);
     
-    let numberOptions = Math.floor(Math.random() * 12) + 1;
-    console.log("generating: ", numberOptions);
+   
+    }
+    //console.log("generating: ", numberOptions);
+    
+    let imageArray = [
+        "./assets/css/images/crystal_1.jpg",
+        "./assets/css/images/crystal_2.jpg",
+        "./assets/css/images/crystal_3.jpg",
+        "./assets/css/images/crystal_4.jpg"
+    ]
     
     //reset cyrstal value assigments 
     for (let i=0; i<4; i++) {
-    
-        //variable with random value assignment for each crystal
+        var numberOptions = Math.floor(Math.random() * 12) + 1;
+        var imageCrystal = $("<img>");
+       //for each iteration we'll create a crystal image:
+       //assigning class
+       imageCrystal.addClass("crystal-image img-fluid mx-.5");
        
+       //assigning image src
+       imageCrystal.attr("src", imageArray[i]);
     
-        //setting 'data-crystal-value' attribute to each tag that has .crystalBtn class
-        $("img").val(numberOptions);
-    
-        //how to assign four different values to the different crystals.
+        //setting 'data-crystal-value' attribute to each crystal
+        imageCrystal.attr("data-crystal-value", numberOptions);
 
-    }
-  }
+        //append crystals to div with id of "crystals"
+        $("#crystals").append(imageCrystal);
+    
+        
+    };
+  
 
  
 //event listener for crystal
-$(".crystalBtn").on("click", function() {
+$(".crystal-image").on("click", function() {
     
-    console.log($(".crystalBtn").attr("data-crystal-value"));
+    console.log($(this).attr("data-crystal-value"));
   
 
   });
