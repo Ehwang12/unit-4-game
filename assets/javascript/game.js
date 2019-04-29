@@ -17,17 +17,38 @@ for (let i=0; i<4; i++) {
     let numberOptions = Math.floor(Math.random() * 12) + 1;
     console.log("generating: ", numberOptions);
 
-    //add 'data-crystal-value' attribute to each tag that has .crystalBtn class
-    let crystals = $('.crystalBtn').attr('data-crystal-value', numberOptions);
+    //setting 'data-crystal-value' attribute to each tag that has .crystalBtn class
+   $('.crystalBtn').attr('data-crystal-value', numberOptions);
 
     //append each item to the affected img tags
     $('.crystalBtn').append(crystals);
     
 }
 
-$('.crystalBtn').on('click', function() {
-        console.log($(this).attr('data-crystal-value'));
+// $('.crystalBtn').on('click', function() {
+        //crystsalValue = console.log($(this).attr(numberOptions));
+        
+        //converting string value into number 
+        //crystalValue = parseInt(crystalValue);
+
+        //adds crystal value to player score
+        //playerScore += crystalValue; 
+
+        //display new total score 
+        //$('#yourScore').text(playerScore);
+
+        //if player wins
+        //if(playerScore === guessNumber) {
+            //$('#winLoseAnnounce').text('You Won!');
+        //} else if (playerScore > guessNumber) {
+            //$('#winLoseAnnounce).text('You Lost!');
+        //}
+
+
+
 })
+
+
 
 
 
