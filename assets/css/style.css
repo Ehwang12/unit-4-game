@@ -3,9 +3,24 @@
     margin: 0;
 }
 
+body {
+    background-image: url(./images/bg_1.png);
+}
 header {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+}
+
+#title {
+    color: #ffc60b;
+}
+
+#rules {
+    color: #d698b9;
+}
+
+h4 {
+    color: #ff8b00;   
 }
 
 h2, h4, h5, h6 {
@@ -16,11 +31,29 @@ p {
     font-family: 'VT323', monospace;
 }
 
+#winBox, #lossBox {
+    color: #ffbea3;
+}
+
+#winLoseAnnounce {
+    color: #ffbea3;
+}
+
 img {
     width: 7rem;
+}
+
+#totalScore, #masterScore {
+    color: #d698b9;
+}
+
+#myAudio {
+    display: table;
+    margin: 5rem auto;
 }
 
 footer {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
+    color: #ab93c9;
 }

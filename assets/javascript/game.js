@@ -22,10 +22,10 @@ function startGame() {
     $("#compNumber").text(guessNumber);
     
     let imageArray = [
-        "./assets/css/images/crystal_1.jpg",
-        "./assets/css/images/crystal_2.jpg",
-        "./assets/css/images/crystal_3.jpg",
-        "./assets/css/images/crystal_4.jpg"
+        "./assets/css/images/crystal_1T.png",
+        "./assets/css/images/crystal_2T.png",
+        "./assets/css/images/crystal_3T.png",
+        "./assets/css/images/crystal_4T.png"
     ]
     
     //reset cyrstal value assigments 
@@ -34,7 +34,7 @@ function startGame() {
         var imageCrystal = $("<img>");
        //for each iteration we'll create a crystal image:
        //assigning class
-       imageCrystal.addClass("crystal-image img-fluid justify-content-center my-4 mx-2");
+       imageCrystal.addClass("crystal-image img-fluid justify-content-center my-4 mx-auto");
        
        //assigning image src
        imageCrystal.attr("src", imageArray[i]);
@@ -92,6 +92,17 @@ $(document).on("click", ".crystal-image", function() {
     }
   })
   
+//audio setup
+// var music = $("#myAudio"); 
+
+// function playAudio() { 
+//   music.play(); 
+// } 
+
+// function pauseAudio() { 
+//   music.pause(); 
+// } 
+
 });
 
 

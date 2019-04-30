@@ -14,7 +14,7 @@
     <title>Crystal Collector</title>
 </head>
 <body>
-    <header class="header my-5"><h1>Crystal Collector</h1></header>
+    <header class="header my-5"><h1 id="title">Crystal Collector</h1></header>
     
     <div class="container">
     
@@ -25,7 +25,7 @@
         <div class="col-8">
           <div class="card mx-auto mx-3" style="width: 18rem;">
             <div class="card-body text-center">
-              <h5 class="card-title">Game Rules</h5>
+              <h5 class="card-title" id="rules">Game Rules</h5>
               <p class="card-text">Click the crystals to try and match the master score in order to win.</p>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <h4>Win: </h4>
             <lr><span><h1 id="winBox">0</h1></span></lr> 
         </div>
-        <div class="col-4 text-center my-3" id="winLoseAnnounce"></div>
+        <div class="col-4 text-center mt-5" id="winLoseAnnounce"></div>
         <div class="col-4 text-center my-3">
             <h4>Loss: </h4>
             <lr><span><h1 id="lossBox">0</h1></span></lr> 
@@ -52,7 +52,8 @@
         <div class="row">
         <div class="col-12 text-center">
             <div class="card border-dark mb-3 mx-auto" style="max-width: 10rem;">
-                <div class="card-body text-dark">
+              <div class="card-header text-center"><h6 id="masterScore">Master Score:</h6></div>  
+              <div class="card-body text-dark">
                   <h6 class="card-title text-center"><span id="compNumber"></span></h6>
             </div>
           </div>
@@ -72,17 +73,19 @@
       <div class="row">
         <div class="col-12">
           <div class="card border-dark my-3 mx-auto" style="max-width: 12rem;">
-              <div class="card-header text-center"><h6>Your Total Score:</h6></div>
+              <div class="card-header text-center"><h6 id="totalScore">Your Total Score:</h6></div>
               <div class="card-body text-dark">
                 <h5 class="card-title text-center" id="yourScore">Score</h5>
               </div>
           </div>
         </div>
       </div>
-    
 </div>
-
-  <footer class="fixed-bottom">
+<!-- Audio -->
+<audio controls loop id="myAudio">
+  <source src="./assets/css/music/Digital Zen - Eight BitBackground - Royalty Free Music.mp3" type="audio/mpeg">
+</audio>
+  <footer>
     Copyright &copy; Esther Hwang | 2019
   </footer>
 
