@@ -52,7 +52,9 @@ startGame();
 $(document).on("click", ".crystal-image", function() {
     
     var crystalValue = ($(this).attr("data-crystal-value"));
-    console.log($(this).attr("data-crystal-value"));
+    
+    //no cheating now...
+    //console.log($(this).attr("data-crystal-value"));
    
     //converting string value into number 
     crystalValue = parseInt(crystalValue);
