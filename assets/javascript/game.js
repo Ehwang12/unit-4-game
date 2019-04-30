@@ -9,9 +9,13 @@ var loss = 0;
 //to start game
 function startGame() {
     
-    $(".crystal-image").empty();
+    $("#crystals").empty();
+
+    //set playerScore to 0
+    playerScore = 0;
+   
     //reset random number generator
-    var guessNumber = Math.floor(Math.random() * 101) + 19;
+    guessNumber = Math.floor(Math.random() * 101) + 19;
     console.log("comp number is ", guessNumber);
     
     //puts random number into div
@@ -30,7 +34,7 @@ function startGame() {
         var imageCrystal = $("<img>");
        //for each iteration we'll create a crystal image:
        //assigning class
-       imageCrystal.addClass("crystal-image img-fluid mx-.5");
+       imageCrystal.addClass("crystal-image img-fluid justify-content-center my-4 mx-2");
        
        //assigning image src
        imageCrystal.attr("src", imageArray[i]);
@@ -59,7 +63,7 @@ $(document).on("click", ".crystal-image", function() {
     //display new total score 
     $("#yourScore").text(playerScore);
 
-    if (playerScore >= guessNumber) {
+    if (playerScore == guessNumber) {
         
         //show winning banner
          $("#winLoseAnnounce").html("<h2>You Won!</h2>");
@@ -71,7 +75,7 @@ $(document).on("click", ".crystal-image", function() {
 
          startGame();
 
-    } else if (playerScore === guessNumber) {
+    } else if (playerScore > guessNumber) {
 
         //show losing banner
         $("#winLoseAnnounce").html("<h2>You Lost!</h2>");
@@ -85,6 +89,7 @@ $(document).on("click", ".crystal-image", function() {
 
     }
   })
+  
 });
 
 
