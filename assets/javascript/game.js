@@ -11,7 +11,8 @@ function startGame() {
     
     $("#crystals").empty();
 
-    //set playerScore to 0
+
+    //reset player score
     playerScore = 0;
 
     //reset random number generator
@@ -78,7 +79,7 @@ $(document).on("click", ".crystal-image", function() {
          startGame();
 
     } else if (playerScore > guessNumber) {
-        
+       
         //show losing banner
         $("#winLoseAnnounce").html("<h2>You Lost!</h2>");
 
